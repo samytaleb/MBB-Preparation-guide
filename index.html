@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samy · Consulting Interview OS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+
+  <!-- ======================================================
+       SIDEBAR
+  ====================================================== -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <div class="logo-tag">Consulting Interview OS</div>
+      <div class="logo-title">Samy Taleb</div>
+      <div class="logo-subtitle">Consulting Interview OS</div>
+    </div>
+    <div class="sidebar-date">
+      <div class="date-label">Today</div>
+      <div class="date-value" id="sidebar-date"></div>
+      <div class="interview-countdown" id="interview-countdown">⚡ Entretien : — jours</div>
+    </div>
+    <nav id="sidebar-nav"></nav>
+  </aside>
+
+  <!-- ======================================================
+       MAIN
+  ====================================================== -->
+  <main class="main">
+    <div class="topbar">
+      <div>
+        <div class="topbar-title" id="topbar-title">Dashboard</div>
+        <div class="topbar-sub" id="topbar-sub">Samy Consulting Interview OS</div>
+      </div>
+      <div class="topbar-actions">
+        <button class="lang-toggle" id="lang-toggle" onclick="App.toggleLang()">🇬🇧 EN</button>
+        <div class="readiness-badge" id="readiness-badge" onclick="App.navigate('progress')">
+          <div class="readiness-dot yellow"></div>
+          <span class="readiness-val">—% ready</span>
+        </div>
+      </div>
+    </div>
+    <div class="content" id="content">
+      <!-- Content rendered by app.js -->
+    </div>
+  </main>
+
+</div>
+
+<!-- Toast container -->
+<div class="toast-container" id="toast-container"></div>
+
+<!-- Scripts -->
+<script src="data.js"></script>
+<script src="data-extended.js"></script>
+<script src="data-courses.js"></script>
+<script src="data-courses-1.js"></script>
+<script src="data-courses-2.js"></script>
+<script src="data-courses-3.js"></script>
+<script src="data-courses-extra.js"></script>
+<script src="data-courses-math.js"></script>
+<script src="data-drills-extra.js"></script>
+<script src="data-resources-extra.js"></script>
+<script src="en-cat00-07-08.js"></script>
+<script src="en-cat01-02.js"></script>
+<script src="en-cat03-04.js"></script>
+<script src="en-cat05-06.js"></script>
+<script src="en-drills.js"></script>
+<script src="en-extended-drills.js"></script>
+<script src="answers-patch.js"></script>
+<script src="data-cases-extra.js"></script>
+<script src="data-extra2-part1.js"></script>
+<script src="data-extra2-part2.js"></script>
+<script src="data-math-extra.js"></script>
+<script src="data-math-extra2.js"></script>
+<script src="data-pricing-cases.js"></script>
+<script src="data-exhibits-svg.js"></script>
+<script src="app.js"></script>
+<script>
+  // Set sidebar date
+  const d = new Date();
+  const opts = { weekday: 'long', month: 'long', day: 'numeric' };
+  document.getElementById('sidebar-date').textContent = d.toLocaleDateString('en-GB', opts);
+</script>
+</body>
+</html>
